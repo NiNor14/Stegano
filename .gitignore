@@ -1,4 +1,4 @@
-*.exe
-*.cache
-*.pdb
-*.obj
+**./*exe
+**./*cache*
+*./*pdb
+**./*obj
