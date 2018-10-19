@@ -14,7 +14,7 @@ namespace Steganographie
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World is mine et encore le mot est faible");
+			Console.WriteLine("Hello World is mine et encore le mot est faible ...");
 			
 			// TODO: Implement Functionality Here
 			
