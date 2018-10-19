@@ -1,6 +1,0 @@
-C:\Users\Nicolas\Documents\GitHub\Stegano\Steganographie\Steganographie\bin\Debug\Steganographie.exe.config
-C:\Users\Nicolas\Documents\GitHub\Stegano\Steganographie\Steganographie\bin\Debug\Steganographie.exe
-C:\Users\Nicolas\Documents\GitHub\Stegano\Steganographie\Steganographie\bin\Debug\Steganographie.pdb
-C:\Users\Nicolas\Documents\GitHub\Stegano\Steganographie\Steganographie\obj\Debug\Steganographie.csprojResolveAssemblyReference.cache
-C:\Users\Nicolas\Documents\GitHub\Stegano\Steganographie\Steganographie\obj\Debug\Steganographie.exe
-C:\Users\Nicolas\Documents\GitHub\Stegano\Steganographie\Steganographie\obj\Debug\Steganographie.pdb
