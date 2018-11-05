@@ -1,0 +1,11 @@
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2.csprojResolveAssemblyReference.cache
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Window1.baml
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Window1.g.cs
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\App.g.cs
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2_MarkupCompile.cache
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2.g.resources
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\bin\Debug\Steganov2.exe.config
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\bin\Debug\Steganov2.exe
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\bin\Debug\Steganov2.pdb
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2.exe
+C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2.pdb
