@@ -36,6 +36,7 @@ namespace Steganov2
 		Microsoft.Win32.OpenFileDialog dlg; //Représente une boîte de dialogue commune qui permet à un utilisateur de spécifier un nom de fichier 
 											//pour un ou plusieurs fichiers à ouvrir.
         byte[] Pixels; // déclaration du tableau pixel qui contiendra les  pixel du bitmapimage ouvert grace à dlg
+        int Stride =0;// 4 octect * par largeur de l'image stride == RowSize sur le wiki 
         bool photoDisplayed; // déclaration du booléen photodisplayed qui permet de savoir si une photo est déjà affichée
         BitmapImage bmp; // déclaration de la variable bmp au format bitmap image qui correspond au fichier image choisi grace à dlg
 		
@@ -57,9 +58,9 @@ namespace Steganov2
             // Process open file dialog box results
             if (result == true) // on vérifie qu'un fichier a bien été séléctionné dans dlg
             {
+            	textbox.Text ="";
                 bmp = new BitmapImage(new Uri(dlg.FileName)); // vu qu'on a a filtré dlg pour qu'il n'ouvre que des .jpg ou .png, on sait que le fichier séléctionné peut être ouvert comme une bitmap image
                 // https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier
-                
                 Cadre.Source = bmp; // on affiche dans notre cadre l'image séléctionnée dans dlg
                 //https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.pixelformat.bitsperpixel?view=netframework-4.7.2
                 // stride = largeur de l'image
@@ -67,9 +68,9 @@ namespace Steganov2
                 // Pixel a une dimension 
                 // si le stride est à 100 elle fait 100*100
                 // si le stride fait 50 elle fait 50*200
-                int Stride = 4 * (((int)bmp.Width * bmp.Format.BitsPerPixel + 31) / 32);// 4 octect * par largeur de l'image stride == RowSize sur le wiki 
+                Stride = 4 * ((bmp.PixelWidth * bmp.Format.BitsPerPixel + 31) / 32);// 4 octect * par largeur de l'image stride == RowSize sur le wiki 
                 // https://en.wikipedia.org/wiki/BMP_file_format
-                int PixelArraySize = (int)bmp.PixelHeight * Stride;
+                int PixelArraySize = bmp.PixelHeight * Stride;
                 Pixels = new byte[PixelArraySize];// Pixels va pouvoir contenir toutes les infos sur tous nos pixels, puisque un pixel fait 4 octets,si l'image fait 10 000 px Pixels fait 10 000 * 4 = 40 000 octets
                 
                 bmp.CopyPixels(Pixels, Stride, 0); //
@@ -105,9 +106,8 @@ namespace Steganov2
                 	Pixels[i * 4 + 3] = (byte)textbox.Text[i];// on avance de 4 par 4 car on ecrit uniquement dans le chanel alpha
                     i++;
                 }
-                int stride = 4 * (((int)bmp.Width * bmp.Format.BitsPerPixel + 31) / 32);
                PixelFormat pf = PixelFormats.Bgra32; // On utilise le format de pixel standard
-               var newImg = BitmapSource.Create((int)bmp.Width, (int)bmp.Height, bmp.DpiX, bmp.DpiY, pf, null, Pixels.ToArray(), stride); // on créé une nouvelle bmp, en se basant sur les infos de la précédente
+               var newImg = BitmapSource.Create(bmp.PixelWidth, bmp.PixelHeight, bmp.DpiX, bmp.DpiY, pf, null, Pixels.ToArray(), Stride); // on créé une nouvelle bmp, en se basant sur les infos de la précédente
                 Cadre.Source = newImg; // on met notre image modifié dans le cadre
                //https://stackoverflow.com/questions/4161359/save-bitmapimage-to-file --> important
                 BitmapEncoder encoder = new PngBitmapEncoder(); // On a besoin d'un encoder pour pouvoir enregistrer notre image sur le disque /!\ On utilise un encoder PNG puisque l'encoder jpg, 
@@ -138,11 +138,9 @@ namespace Steganov2
                 // using permet d'évité les fuites memoire si le dev oublie d'annuler le .Dispose
                 
                 // puisque l'image affichée est celle qui est désormais sauvegardée sur le disque, on met à jour toutes les variables, comme si on venait d'ouvrir cette image dans OpenImage
-                bmp = new BitmapImage(new Uri(newFile)); // Permet de réencodé un message sur l'image qui à deja été encodé sans provoqué d'érreur
-                int Stride = 4 * (((int)bmp.Width * bmp.Format.BitsPerPixel + 31) / 32);
-                Pixels = new byte[(int)bmp.PixelHeight * Stride];
-                bmp.CopyPixels(Pixels, Stride, 0);
-                photoDisplayed = true;
+                Cadre.Source = null;
+                textbox.Text ="";
+                photoDisplayed = false;
                 
                 // popup.box xpf 
             }
