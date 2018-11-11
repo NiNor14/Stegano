@@ -9,7 +9,7 @@ MinWidth="1000">
 			<RowDefinition
 				Height="3*" />
 			<RowDefinition
-				Height="*" />
+				Height="*" /> 
 		</Grid.RowDefinitions>
 		<Border BorderBrush="AliceBlue" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Center" >
 			<Image
@@ -28,7 +28,7 @@ MinWidth="1000">
 			Width="100"
 			Height="50"
 			Margin="50"
-			Content="Ouvrir Photo"
+			Content="Embarquer"
 			Click="OpenImage"/>
 				<TextBox
 			Name="textbox"
@@ -41,7 +41,7 @@ MinWidth="1000">
 			Width="100"
 			Height="50"
 			Margin="50"
-			Content="Encoder Photo"
+			Content="Encoder"
 			Click="SaveImage" />
 	
 		</StackPanel>

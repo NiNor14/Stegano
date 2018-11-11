@@ -46,7 +46,7 @@ namespace Steganov2
             //initialisation de dlg
             dlg = new Microsoft.Win32.OpenFileDialog(); 
             dlg.DefaultExt = ".jpg"; // initialisation du filtre par défaut de dlg
-            dlg.Filter = "Photo jpg|*.jpg| Photo .png|*.png"; // Filter files by extension / Photo jpg (.jpg) c'est du visuel et |*.jpg| expression réguliere permet d'ouvrir le format .Jpg et .png
+            dlg.Filter = "Photo .jpg|*.jpg| Photo .png|*.png"; // Filter files by extension / Photo jpg (.jpg) c'est du visuel et |*.jpg| expression réguliere permet d'ouvrir le format .Jpg et .png
             photoDisplayed = false;
 		}
 		       private void OpenImage(object sender, RoutedEventArgs e)
