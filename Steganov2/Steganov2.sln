@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 # SharpDevelop 5.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steganov2", "Steganov2\Steganov2.csproj", "{243F2B6B-87A4-45EE-9807-5F35E1573C6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steganov2", "Steganov2.csproj", "{243F2B6B-87A4-45EE-9807-5F35E1573C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
