@@ -9,3 +9,14 @@ C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\bin\Debug\S
 C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\bin\Debug\Steganov2.pdb
 C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2.exe
 C:\Users\Nicolas\Documents\SharpDevelop Projects\Steganov2\Steganov2\obj\Debug\Steganov2.pdb
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\bin\Debug\Steganov2.exe.config
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\bin\Debug\Steganov2.exe
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\bin\Debug\Steganov2.pdb
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Steganov2.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Window1.baml
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Window1.g.cs
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\App.g.cs
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Steganov2_MarkupCompile.cache
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Steganov2.g.resources
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Steganov2.exe
+C:\Users\Admin\Documents\GitHub\Stegano\Steganov2\Steganov2\Steganov2\obj\Debug\Steganov2.pdb
