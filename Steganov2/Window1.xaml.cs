@@ -36,11 +36,7 @@ namespace Steganov2
 		Microsoft.Win32.OpenFileDialog dlg; //Représente une boîte de dialogue commune qui permet à un utilisateur de spécifier un nom de fichier 
 											//pour un ou plusieurs fichiers à ouvrir.
         byte[] Pixels; // déclaration du tableau pixel qui contiendra les  pixel du bitmapimage ouvert grace à dlg
-<<<<<<< HEAD:Steganov2/Steganov2/Steganov2/Window1.xaml.cs
-    	int Stride = 0;
-=======
         int Stride =0;// 4 octect * par largeur de l'image stride == RowSize sur le wiki 
->>>>>>> e8f9997c2319555605228bb83bcf1b769d9060ff:Steganov2/Window1.xaml.cs
         bool photoDisplayed; // déclaration du booléen photodisplayed qui permet de savoir si une photo est déjà affichée
         BitmapImage bmp; // déclaration de la variable bmp au format bitmap image qui correspond au fichier image choisi grace à dlg
 		
@@ -72,11 +68,8 @@ namespace Steganov2
                 // Pixel a une dimension 
                 // si le stride est à 100 elle fait 100*100
                 // si le stride fait 50 elle fait 50*200
-<<<<<<< HEAD:Steganov2/Steganov2/Steganov2/Window1.xaml.cs
-                Stride = 4 * (((int)bmp.Width * bmp.Format.BitsPerPixel + 31) / 32);// 4 octect * par largeur de l'image stride == RowSize sur le wiki 
-=======
                 Stride = 4 * ((bmp.PixelWidth * bmp.Format.BitsPerPixel + 31) / 32);// 4 octect * par largeur de l'image stride == RowSize sur le wiki 
->>>>>>> e8f9997c2319555605228bb83bcf1b769d9060ff:Steganov2/Window1.xaml.cs
+
                 // https://en.wikipedia.org/wiki/BMP_file_format
                 int PixelArraySize = bmp.PixelHeight * Stride;
                 Pixels = new byte[PixelArraySize];// Pixels va pouvoir contenir toutes les infos sur tous nos pixels, puisque un pixel fait 4 octets,si l'image fait 10 000 px Pixels fait 10 000 * 4 = 40 000 octets
@@ -115,11 +108,7 @@ namespace Steganov2
                     i++;
                 }
                PixelFormat pf = PixelFormats.Bgra32; // On utilise le format de pixel standard
-<<<<<<< HEAD:Steganov2/Steganov2/Steganov2/Window1.xaml.cs
-               var newImg = BitmapSource.Create((int)bmp.Width, (int)bmp.Height, bmp.DpiX, bmp.DpiY, pf, null, Pixels.ToArray(), (int)bmp.Width * 4); // on créé une nouvelle bmp, en se basant sur les infos de la précédente
-=======
                var newImg = BitmapSource.Create(bmp.PixelWidth, bmp.PixelHeight, bmp.DpiX, bmp.DpiY, pf, null, Pixels.ToArray(), Stride); // on créé une nouvelle bmp, en se basant sur les infos de la précédente
->>>>>>> e8f9997c2319555605228bb83bcf1b769d9060ff:Steganov2/Window1.xaml.cs
                 Cadre.Source = newImg; // on met notre image modifié dans le cadre
                //https://stackoverflow.com/questions/4161359/save-bitmapimage-to-file --> important
                 BitmapEncoder encoder = new PngBitmapEncoder(); // On a besoin d'un encoder pour pouvoir enregistrer notre image sur le disque /!\ On utilise un encoder PNG puisque l'encoder jpg, 
@@ -150,16 +139,11 @@ namespace Steganov2
                 // using permet d'évité les fuites memoire si le dev oublie d'annuler le .Dispose
                 
                 // puisque l'image affichée est celle qui est désormais sauvegardée sur le disque, on met à jour toutes les variables, comme si on venait d'ouvrir cette image dans OpenImage
-<<<<<<< HEAD:Steganov2/Steganov2/Steganov2/Window1.xaml.cs
-                bmp = new BitmapImage(new Uri(newFile)); // Permet de réencodé un message sur l'image qui à deja été encodé sans provoqué d'érreur
-                Pixels = new byte[(int)bmp.PixelHeight * Stride];
-                bmp.CopyPixels(Pixels, Stride, 0);
-                photoDisplayed = true;
-=======
-                Cadre.Source = null;
-                textbox.Text ="";
-                photoDisplayed = false;
->>>>>>> e8f9997c2319555605228bb83bcf1b769d9060ff:Steganov2/Window1.xaml.cs
+
+  	            Cadre.Source = null; // vide le cadre
+                textbox.Text =""; // vide la texte box
+                photoDisplayed = false; // passe la variable photo display  à faux
+
                 
                 // popup.box xpf 
             }
